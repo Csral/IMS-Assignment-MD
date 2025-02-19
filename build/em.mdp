@@ -1,0 +1,8 @@
+
+    ; Energy Minimization Parameters
+    integrator = steep       ; Steepest descent minimization
+    emtol = 1000.0           ; Convergence criterion (kJ/mol/nm)
+    emstep = 0.01            ; Minimization step size (nm)
+    nsteps = 50000           ; Maximum number of steps
+    nstenergy = 1            ; Write energies every step
+    

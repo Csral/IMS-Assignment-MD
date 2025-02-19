@@ -1,0 +1,26 @@
+
+    ; NPT Equilibration Parameters
+    integrator = md          ; Leap-frog integrator
+    dt = 0.002               ; Time step (ps)
+    nsteps = 50000           ; Total simulation time: 100 ps
+    nstxout = 500            ; Save coordinates every 1 ps
+    nstvout = 500            ; Save velocities every 1 ps
+    nstenergy = 500          ; Save energies every 1 ps
+
+    ; Temperature Coupling
+    tcoupl = v-rescale       ; Temperature coupling method
+    tc-grps = System         ; Apply to the entire system
+    tau_t = 0.1              ; Coupling time constant (ps)
+    ref_t = 300              ; Reference temperature (K)
+
+    ; Pressure Coupling
+    pcoupl = Parrinello-Rahman
+    pcoupltype = isotropic   ; Isotropic pressure coupling
+    tau_p = 2.0              ; Coupling time constant (ps)
+    ref_p = 1.0              ; Reference pressure (bar)
+    compressibility = 4.5e-5 ; Compressibility (bar^-1), typical for water
+
+    ; Constraints
+    constraints = h-bonds    ; Constrain all bonds involving hydrogen
+    constraint_algorithm = LINCS
+    
