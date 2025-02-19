@@ -36,5 +36,5 @@ def plot_xvg(file_path, xlabel="X-axis", ylabel="Y-axis", title="Plot"):
 
 os.chdir("build")
 # Example usage
-file_path = "potential.xvg"  # Replace with your .xvg file path
-plot_xvg(file_path, xlabel="Time (ps)", ylabel="Value", title="GROMACS Data")
+file_path = "rmsd.xvg"  # Replace with your .xvg file path
+plot_xvg(file_path, xlabel="Time (ps)", ylabel="Value", title="RMSD")
